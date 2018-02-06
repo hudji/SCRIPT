@@ -65,8 +65,28 @@ def year_date():
     return parsing
 dt=year_date()
 
+WIT = [102061, 102062, 102063, 102064, 102065, 102066, 109058, 109059, 109060, 109061, 109062, 109063, 109064, 109065, 109066, 109067, 100062, 100063, 100064, 100065,
+       100066, 107059, 107060, 107061, 107062, 107063, 107064, 107065, 107066, 105060, 105061, 105062, 105063, 105064, 105065, 103061, 103062, 103063, 103064, 110057,
+       110058, 110059, 110060, 110061, 110062, 110063, 110064, 110065, 110066, 110067, 101061, 101062, 101063, 101064, 101065, 101066, 108060, 108061, 108062, 108063,
+       108064, 108065, 108066, 106060, 106061, 106062, 106063, 106064, 106065, 106066, 104060, 104061, 104062, 104063, 104064, 104065, 111060, 111061, 111062]
+WIB= [118060, 118061, 118062, 118063, 118064, 118065, 118066, 125059, 125060, 125061, 125062, 125063, 125064, 123057, 123058, 123059, 123060, 123061, 123062,
+      123063, 123064, 123065, 130056, 130057, 130058, 130059, 121060, 121061, 121062, 121063, 121064, 121065, 128057, 128058, 128059, 128060, 128061, 119060,
+      119061, 119062, 119063, 119064, 119065, 119066, 126059, 126060, 126061, 126062, 126063, 124058, 124059, 124060, 124061, 124062, 124063, 124064, 124065,
+      131056, 131057, 131058, 122058, 122059, 122060, 122061, 122062, 122063, 122064, 122065, 129057, 129058, 129059, 129060, 120060, 120061, 120062, 120063,
+      120064, 120065, 120066, 127058, 127059, 127060, 127061, 127062]
+s= int(filename[0][10:16])
+
+def zone():
+    if s in WIB:
+        k = int(7)
+    elif s in WIT:
+        k = int(9)
+    else:
+        k = int(8)
+    return k
+
 def hour():
-    h=dt.hour+7
+    h=dt.hour+ zone()
     return h
 def second():
     s= float(dt.microsecond)/1000000+dt.second
@@ -187,7 +207,7 @@ for item in IC_final:
     proj = band.GetProjection()
     shape = my_dict[filename[0][:-2]+'B1'].shape
     driver = gdal.GetDriverByName("GTiff")
-    dst_ds = driver.Create("D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP310118/126061/" +item + "topo.TIF", shape[1], shape[0], 1, gdal.GDT_Float32)
+    dst_ds = driver.Create("D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP310118/126061/" +item + "topo2.TIF", shape[1], shape[0], 1, gdal.GDT_Float32)
     dst_ds.SetGeoTransform(geo)
     dst_ds.SetProjection(proj)
     ds=dst_ds.GetRasterBand(1)
@@ -217,7 +237,7 @@ def export_array(in_array, output_path):
     outdata.FlushCache()
     outdata = None
 
-export_array(sample_ndvi, "D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP220118/126062/sample.TIF")
+export_array(IC, "D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP310118/126061/IC.TIF")
 
 csv2 = {}
 for c in IC_final:

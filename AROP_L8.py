@@ -71,3 +71,7 @@ print (ulx_base)
 wx= ((long_base*28.5)+(ulx_base-ulx_warp))/30
 wy= ((lat_base*28.5)+(uly_base-uly_warp))/30
 
+iAu = (lat_base+ 11)/2
+iAl = (lat_base- 11)/2
+jAu = (long_base+ 11)/2
+jAl = (long_base- 11)/2
