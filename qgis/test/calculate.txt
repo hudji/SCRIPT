@@ -1,0 +1,26 @@
+import datetime
+import math
+from datetime import date
+#Load Metadata
+f = open('D:/PROJECT/FOREST 2020/TRAINING/PyQgis/DATA/source/mtl.txt', 'r') #open file for reading
+def build_data(f): #build dictionary
+    output = {} #Dict
+    for line in f.readlines(): #Iterates through every line in the string
+        if "=" in line: #make sure line has data as wanted
+            l = line.split("=") #Seperate by "=" and put into a list
+            output[l[0].strip()] = l[1].strip() #First word is key, second word is value
+    return output #Returns a dictionary with the key, value pairs.
+data = build_data(f)
+
+def year_date():
+    date_file=data['FILE_DATE']
+    yearTahun=date_file[:10]
+    time_data=date_file[-9:-1]
+    all= yearTahun+time_data
+    dt = datetime.strptime(all, '%Y-%m-%d%H:%M:%S')
+    return dt
+
+def day(yd.year, yd.month, yd.day):
+    day_date= date(year, month, day)
+    sum_of_day=int(day_date.strftime('%j'))
+    return sum_of_day;

@@ -1,0 +1,2 @@
+x= "sahid"
+print x
