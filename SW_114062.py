@@ -9,6 +9,8 @@ from scipy.stats import linregress
 import pandas as pd
 # from dict import dict
 import numexpr
+import time
+start_time=time.time()
 #Load Metadata
 path_f = 'D:/FORESTS2020/DATA/LANDSAT/PATH ROW/114062/*.txt'#open file for reading
 glob_f= glob.glob(path_f)
@@ -197,35 +199,35 @@ for item in IC_final:
     dst_ds.FlushCache()
     dst_ds = None  # save, close""
 
-
-def export_array(in_array, output_path):
-    """This function is used to produce output of array as a map."""
-    global proj, geotrans, row, col
-    proj     = band.GetProjection()
-    geotrans = band.GetGeoTransform()
-    row      = band.RasterYSize
-    col      = band.RasterXSize
-    driver   = gdal.GetDriverByName("GTiff")
-    outdata  = driver.Create(output_path, col, row, 1, gdal.GDT_Float32)
-    outband  = outdata.GetRasterBand(1)
-    outband.SetNoDataValue(-9999)
-    outband.WriteArray(in_array)
-    # Georeference the image
-    outdata.SetGeoTransform(geotrans)
-    # Write projection information
-    outdata.SetProjection(proj)
-    outdata.FlushCache()
-    outdata = None
-
-export_array(sample_ndvi, "D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP220118/126062/sample.TIF")
-
-csv2 = {}
-for c in IC_final:
-        val4=IC_final[c]
-        csv2[c]= val4[a_true,b_true].ravel()
-        #print "hasil", csv2
-        df=pd.DataFrame(csv2)
-        df2=pd.DataFrame(temp)
-        df3=pd.DataFrame({'IC':IC_true})
-        dfn=pd.concat([df3, df, df2], axis=1)
-        dfn.to_csv("D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP310118/122065/sample.csv", index= False)
+print("finish: running time: %s seconds" % (time.time() - start_time) )
+# def export_array(in_array, output_path):
+#     """This function is used to produce output of array as a map."""
+#     global proj, geotrans, row, col
+#     proj     = band.GetProjection()
+#     geotrans = band.GetGeoTransform()
+#     row      = band.RasterYSize
+#     col      = band.RasterXSize
+#     driver   = gdal.GetDriverByName("GTiff")
+#     outdata  = driver.Create(output_path, col, row, 1, gdal.GDT_Float32)
+#     outband  = outdata.GetRasterBand(1)
+#     outband.SetNoDataValue(-9999)
+#     outband.WriteArray(in_array)
+#     # Georeference the image
+#     outdata.SetGeoTransform(geotrans)
+#     # Write projection information
+#     outdata.SetProjection(proj)
+#     outdata.FlushCache()
+#     outdata = None
+#
+# export_array(sample_ndvi, "D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP220118/126062/sample.TIF")
+#
+# csv2 = {}
+# for c in IC_final:
+#         val4=IC_final[c]
+#         csv2[c]= val4[a_true,b_true].ravel()
+#         #print "hasil", csv2
+#         df=pd.DataFrame(csv2)
+#         df2=pd.DataFrame(temp)
+#         df3=pd.DataFrame({'IC':IC_true})
+#         dfn=pd.concat([df3, df, df2], axis=1)
+#         dfn.to_csv("D:/FORESTS2020/TRAINING/Python/RESULT/TOPO/TP310118/122065/sample.csv", index= False)
