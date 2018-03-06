@@ -18,7 +18,7 @@
       <file leaf-file-name="PP_103063.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PP_103063.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1151">
+            <state relative-caret-position="2496">
               <caret line="166" column="19" lean-forward="false" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -39,13 +39,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SW_114062.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SW_114062.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SW_114062.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="201" column="68" lean-forward="false" selection-start-line="201" selection-start-column="68" selection-end-line="201" selection-end-column="68" />
+            <state relative-caret-position="448">
+              <caret line="28" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="71" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#17#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sulawesi.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Auto/SCRIPT/Sulawesi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3216">
+              <caret line="201" column="71" lean-forward="false" selection-start-line="201" selection-start-column="71" selection-end-line="201" selection-end-column="71" />
+              <folding>
+                <element signature="e#17#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,22 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SUM_126061_II.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SUM_126061_II.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3104">
-              <caret line="204" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="257" selection-end-column="105" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SUM_124061_I.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SUM_124061_I.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2736">
+            <state relative-caret-position="272">
               <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="50" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -150,12 +150,12 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CIDANAU3.py" />
         <option value="$PROJECT_DIR$/CIDANAU2.py" />
         <option value="$PROJECT_DIR$/CIDANU4.py" />
         <option value="$PROJECT_DIR$/CIDANAU5.py" />
@@ -206,6 +206,7 @@
         <option value="$PROJECT_DIR$/SUM_124061_I.py" />
         <option value="$PROJECT_DIR$/FEATHER.py" />
         <option value="$PROJECT_DIR$/SW_114062.py" />
+        <option value="$PROJECT_DIR$/Auto/SCRIPT/Sulawesi.py" />
       </list>
     </option>
   </component>
@@ -233,7 +234,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/GitHubDesktop.exe" />
   </component>
   <component name="RunDashboard">
@@ -366,7 +367,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SUMSEL_12562.py" />
     <entry file="file://$PROJECT_DIR$/SUMSEL_12461.py" />
     <entry file="file://$PROJECT_DIR$/PPT.py" />
     <entry file="file://$PROJECT_DIR$/fmaskvsbqa3.py">
@@ -681,7 +681,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SUM_124061_I.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2736">
+        <state relative-caret-position="272">
           <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="50" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -691,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PP_103063.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1151">
+        <state relative-caret-position="2496">
           <caret line="166" column="19" lean-forward="false" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -701,10 +701,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SW_114062.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="201" column="68" lean-forward="false" selection-start-line="201" selection-start-column="68" selection-end-line="201" selection-end-column="68" />
+        <state relative-caret-position="448">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="201" selection-end-column="71" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#17#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auto/SCRIPT/Sulawesi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3216">
+          <caret line="201" column="71" lean-forward="false" selection-start-line="201" selection-start-column="71" selection-end-line="201" selection-end-column="71" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
